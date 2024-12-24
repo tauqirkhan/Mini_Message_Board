@@ -4,6 +4,7 @@
   </head>
   <body>
     <section>
+      <a href="/new">Link to form</a>
       <% messages.forEach(message => { %> <%-
       include('message/message',{text:message.text, user: message.user, added:
       message.added}) %> <% }) %>
