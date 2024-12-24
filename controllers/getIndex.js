@@ -1,7 +1,7 @@
 const messages = require("../models/messages");
 
 const getIndex = (req, res) => {
-  res.render("new", {
+  res.render("messages", {
     messages: messages,
   });
 };
