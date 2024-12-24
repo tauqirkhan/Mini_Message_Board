@@ -1,3 +1,9 @@
-const getIndex = (req, res) => res.send("This is Index page");
+const messages = require("../models/messages");
+
+const getIndex = (req, res) => {
+  res.render("new", {
+    messages: messages,
+  });
+};
 
 module.exports = getIndex;
