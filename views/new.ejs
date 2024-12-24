@@ -1,0 +1,12 @@
+<html>
+  <head>
+    <title>New Messages</title>
+  </head>
+  <body>
+    <section>
+      <% messages.forEach(message => { %> <%-
+      include('message/message',{text:message.text, user: message.user, added:
+      message.added}) %> <% }) %>
+    </section>
+  </body>
+</html>
