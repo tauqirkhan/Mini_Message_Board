@@ -1,4 +1,4 @@
-const messages = require("../models/messages");
+const { messages } = require("../models/messages");
 
 const getIndex = (req, res) => {
   res.render("messages", {
