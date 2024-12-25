@@ -14,10 +14,10 @@ app.set("view engine", "ejs");
 
 app.use("/", indexRouter);
 app.use("/message", messageRouter);
-app.use((err, req, res, next) => {
-  console.error(err);
-  res.status(err.statusCode || 500).send(err.message);
-});
+// app.use((err, req, res, next) => {
+//   console.error(err);
+//   res.status(err.statusCode || 500).send(err.message);
+// });
 
 app.listen(PORT, () => {
   console.log("App is live at ", `http://localhost:${PORT}/`);
