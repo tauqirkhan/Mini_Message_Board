@@ -1,8 +1,9 @@
-const { messages } = require("../models/messages");
+const db = require("../db/queries");
 
-const getIndex = (req, res) => {
+const getIndex = async (req, res) => {
+  const messagesArr = await db.getAllMessages();
   res.render("messages", {
-    messages: messages,
+    messages: messagesArr,
   });
 };
 

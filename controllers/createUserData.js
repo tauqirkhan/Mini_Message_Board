@@ -1,12 +1,17 @@
-const { messages } = require("../models/messages");
+const db = require("../db/queries");
 
-const createUserData = (req, res) => {
-  messages.push({
-    id: messages[messages.length - 1].id + 1,
-    text: req.body.messageText,
-    user: req.body.authorName,
-    added: new Date(),
-  });
+const createUserData = async (req, res) => {
+  const currentDate = new Date();
+  const formattedDate = currentDate
+    .toISOString()
+    .slice(0, 19)
+    .replace("T", " ");
+
+  await db.insertUserData(
+    req.body.messageText,
+    req.body.authorName,
+    formattedDate
+  );
 
   res.redirect("/");
 };

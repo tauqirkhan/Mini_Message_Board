@@ -20,12 +20,6 @@ const SQL = `
     ('?', 'anonymous4', '2024-01-02 12:23:54');
 `;
 
-const SQL2 = `
-  INSERT INTO messages (text, username, added)
-  VALUES 
-    
-`;
-
 async function main() {
   console.log("seeding...");
   const client = new Client({
