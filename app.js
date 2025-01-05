@@ -15,6 +15,6 @@ app.set("view engine", "ejs");
 app.use("/", indexRouter);
 app.use("/message", messageRouter);
 
-app.listen(PORT, () => {
+app.listen(PORT, "::", () => {
   console.log("App is live at ", `http://localhost:${PORT}/`);
 });
