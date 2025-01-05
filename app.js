@@ -16,5 +16,5 @@ app.use("/", indexRouter);
 app.use("/message", messageRouter);
 
 app.listen(PORT, "::", () => {
-  console.log("App is live at ", `http://localhost:${PORT}/`);
+  console.log("App is live at ", `http://localhost[::]${PORT}/`);
 });
